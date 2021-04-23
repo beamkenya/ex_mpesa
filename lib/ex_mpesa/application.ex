@@ -9,6 +9,7 @@ defmodule ExMpesa.Application do
     children = [
       # Starts a worker by calling: ExMpesa.Worker.start_link(arg)
       # {ExMpesa.Worker, arg}
+      ExMpesa.TokenServer
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
