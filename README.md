@@ -73,7 +73,7 @@ The docs can be found at [https://hexdocs.pm/ex_mpesa](https://hexdocs.pm/ex_mpe
 #### Mpesa Express (STK)
 
 ```elixir
-  iex> ExPesa.Mpesa.Stk.request(%{amount: 10, phone: "254724540000", reference: "reference", description: "description"})
+  iex> ExMpesa.Stk.request(%{amount: 10, phone: "254724540000", reference: "reference", description: "description"})
       {:ok,
         %{
         "CheckoutRequestID" => "ws_CO_010320202011179845",
