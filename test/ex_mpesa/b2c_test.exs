@@ -4,9 +4,9 @@ defmodule ExMpesa.B2CTest do
   use ExUnit.Case, async: true
 
   import Tesla.Mock
-  doctest ExMpesa.B2c
+  doctest ExMpesa.B2C
 
-  alias ExMpesa.B2c
+  alias ExMpesa.B2C
 
   setup do
     mock(fn
@@ -49,13 +49,13 @@ defmodule ExMpesa.B2CTest do
         remarks: "B2C Request"
       }
 
-      {:ok, result} = B2c.request(payment_details)
+      {:ok, result} = B2C.request(payment_details)
 
       assert result["ResponseCode"] == "0"
     end
 
     test "request/1 should error out without required parameter" do
-      {:error, result} = B2c.request(%{})
+      {:error, result} = B2C.request(%{})
 
       "Required Parameter missing, 'command_id','amount','phone_number', 'remarks'" = result
     end

@@ -1,4 +1,4 @@
-defmodule ExMpesa.B2c do
+defmodule ExMpesa.B2C do
   @moduledoc """
     Business to Customer (B2C) API enables the Business or organization to pay its customers who are the end-users of its products or services.
     Currently, the B2C API allows the org to perform around 3 types of transactions: SalaryPayments, BusinessPayments or Promotion payments.
@@ -51,7 +51,7 @@ defmodule ExMpesa.B2c do
                       Defaults to the value passed in the config if not added to params
 
   ## Example
-      iex> ExMpesa.B2c.request(%{command_id: "BusinessPayment", amount: 10500, phone_number: "254722000000", remarks: "B2C Request", result_url: "https://58cb49b30213.ngrok.io/b2c/result_url"})
+      iex> ExMpesa.B2C.request(%{command_id: "BusinessPayment", amount: 10500, phone_number: "254722000000", remarks: "B2C Request", result_url: "https://58cb49b30213.ngrok.io/b2c/result_url"})
       {:ok,
         %{
           "ConversationID" => "AG_20201010_00006bd489ffcaf79e91",
